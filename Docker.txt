@@ -1,0 +1,36 @@
+sudo apt install apt-transport-https ca-certificates curl software-properties-common
+curl -fsSL https://download.docker.com/linux/ubu... | sudo apt-key add -
+sudo add-apt-repository "deb[arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
+sudo apt update
+apt-cache policy docker-ce
+sudo apt install docker-ce
+
+sudo docker run hello-world
+
+sudo docker search nginx
+sudo docker pull nginx
+sudo docker ru -d --name nginx -p 80:80 -v /var/www/html:/usr/share/nginx/html nginx
+sudo docker ps
+sudo docker exec -ti nginx bash
+ls -l
+ls -l /etc/nginx/conf.d/
+exit
+sudo docker ps
+sudo docker stop nginx(or ID container)
+sudo docker start ID container
+sudo docker run hello-world
+sudo docker restart nginx
+sudo docker kill -s HUP nginx
+sudo docker logs nginx
+sudo docker inspect nginx
+
+
+sudo docker port nginx
+sudo docker top nginx
+sudo docker stats nginx
+
+sudo docker images
+sudo docker ps -a
+sudo docker rm 
+
+
